@@ -27,7 +27,7 @@ scale) is the predicted count.
 
 ![UPCount v6 model overview](assets/upcount_model_overview.png)
 
-The released v6 configuration uses 384 x 384 training crops, a class-token-free
+The model uses 384 x 384 training crops, a class-token-free
 ViT-B/16, intermediate blocks `[2, 5, 8, 11]`, and a 64-channel stride-four
 refined feature map. FeatUp-style JBU restores image-aligned detail before the
 proposal and verification heads.
@@ -174,21 +174,11 @@ overlap averaging. Use `--device cpu` for CPU inference or tune
 
 ## Pretrained and fine-tuned weights
 
-Weights are deliberately excluded from Git because each release file is
-hundreds of megabytes. The local `weights/` directory contains release-ready,
-model-only copies; [weights/manifest.json](weights/manifest.json) records the
-checkpoint lineage, metrics, file size, and SHA-256 checksum.
-
 | Checkpoint | Size | Google Drive |
 |---|---:|---|
 | FSC-147 MAE epoch 500 | 429 MiB | [Open](https://drive.google.com/file/d/152V-X1mfuCa5yezhJorrojaTN-aS1Imw/view) |
 | FSC-147 best epoch 432 | 349 MiB | [Open](https://drive.google.com/file/d/1hrW9wpwkuu9lxwov4MHTs4fXoEPoqu7y/view) |
 | CARPK best epoch 816 | 349 MiB | [Open](https://drive.google.com/file/d/1kHqOncgDq9n6rGVntklhqXa24g_OkSK7/view) |
-
-Public download links are not inserted until the files are uploaded. After a
-Google Drive or GitHub Release location is selected, update only the `url`
-fields in `weights/manifest.json`; `scripts/download_weights.py` will then
-download and verify them.
 
 ```bash
 python scripts/download_weights.py --all
@@ -215,9 +205,6 @@ DATA_ROOT=data/CARPK/test \
 CHECKPOINT=weights/upcount_carpk_best_epoch816.pth \
 bash scripts/evaluate_carpk.sh
 ```
-
-Each evaluation writes `metrics.json`, per-image `predictions.csv`, and a
-qualitative image grid. FSC-147 and CARPK use a density scale of 60.
 
 ## Visualization
 
@@ -252,13 +239,6 @@ publication-style summary panels.
 
 ![Proposal and verifier features](assets/proposal_verifier_fsc147_822.png)
 
-### CARPK features
-
-![FeatUp CARPK features](assets/featup_carpk_000308.png)
-
-Additional qualitative grids are available in `assets/` for FSC-147 Val,
-FSC-147 Test, and CARPK Test.
-
 ## Results
 
 All numbers below use the complete official evaluation splits and strict
@@ -269,9 +249,6 @@ checkpoint loading.
 | FSC-147 | Val | 1,286 | 13.62 | 60.07 |
 | FSC-147 | Test | 1,190 | 12.39 | 100.89 |
 | CARPK | Test | 459 | 6.27 | 8.79 |
-
-The FSC-147 model is reference-free but not zero-shot: it is trained on the
-FSC-147 train split. The reported CARPK result uses CARPK fine-tuning.
 
 ## Acknowledgements
 
