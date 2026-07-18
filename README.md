@@ -52,7 +52,7 @@ pip install -r requirements.txt
 Verify the installation without downloading any model weights:
 
 ```bash
-pytest -q tests
+python -m pytest -q tests
 ```
 
 ### 2. FSC-147
