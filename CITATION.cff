@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use UPCount, please cite this repository and the acknowledged upstream works."
+title: "UPCount: Spatially-Aware Class-Agnostic Object Counting"
+type: software
+authors:
+  - family-names: "Wijaya"
+    given-names: "Robert"
+repository-code: "https://github.com/wijayarobert/upcount"
+license: MIT
+version: 1.0.0
+date-released: 2026-07-18
+

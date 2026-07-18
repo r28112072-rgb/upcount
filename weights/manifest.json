@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "weights": [
+    {
+      "id": "mae_fsc147",
+      "filename": "upcount_mae_fsc147_pretrain_epoch500.pth",
+      "url": null,
+      "sha256": "9fd7bcbe5f2967ea769f6253a39ead388e002540efb3c5e983bfe7871e3ffec2",
+      "size_bytes": 449671765,
+      "selection": "final FSC-147 MAE pretraining epoch",
+      "epoch": 500
+    },
+    {
+      "id": "fsc147_best",
+      "filename": "upcount_fsc147_best_epoch432.pth",
+      "url": null,
+      "sha256": "c2f33108525f8990717d2495c19ef5aad1d3d4376478e79b5c074aab1ff05d64",
+      "size_bytes": 365809939,
+      "selection": "lowest FSC-147 validation MAE",
+      "epoch": 432,
+      "metrics": {
+        "val_mae": 13.622352534591254,
+        "val_rmse": 60.070979089203625,
+        "test_mae": 12.386094137667273,
+        "test_rmse": 100.88852361948713
+      }
+    },
+    {
+      "id": "carpk_best",
+      "filename": "upcount_carpk_best_epoch816.pth",
+      "url": null,
+      "sha256": "a7284a374faf629d901323c1fd5ea383aaef5c51db48fd4caa15881518bcbb54",
+      "size_bytes": 365809776,
+      "selection": "lowest held-out CARPK train-split validation MAE",
+      "epoch": 816,
+      "metrics": {
+        "test_mae": 6.26593765557981,
+        "test_rmse": 8.791406232249242
+      }
+    }
+  ]
+}
