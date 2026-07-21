@@ -11,7 +11,7 @@ exemplar boxes, text prompts, or non-maximum suppression. The model returns a
 full-resolution density map; its integral (divided by the dataset density
 scale) is the predicted count.
 
-[arXiv]([https://github.com/cvlab-stonybrook/LearningToCountEverything](https://arxiv.org/abs/2607.16826))
+Full paper is available on [arXiv](https://arxiv.org/abs/2607.16826).
 
 ## Contents
 
