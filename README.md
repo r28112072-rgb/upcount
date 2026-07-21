@@ -11,6 +11,8 @@ exemplar boxes, text prompts, or non-maximum suppression. The model returns a
 full-resolution density map; its integral (divided by the dataset density
 scale) is the predicted count.
 
+[arXiv]([https://github.com/cvlab-stonybrook/LearningToCountEverything](https://arxiv.org/abs/2607.16826))
+
 ## Contents
 
 - [Model overview](#model-overview)
@@ -263,6 +265,22 @@ This repository builds on ideas and implementation conventions from:
 
 We also thank the FSC-147 and CARPK authors for making their datasets and
 evaluation protocols available.
+
+## Citation
+
+```
+@misc{wijaya2026spatiallyawareclassagnosticobjectcounting,
+      title={Spatially-Aware Class-Agnostic Object Counting}, 
+      author={Robert Wijaya and Md. Tanvir Hossain and Amanda Kau and Ngai-Man Cheung},
+      year={2026},
+      eprint={2607.16826},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2607.16826}, 
+}
+```
+
+
 
 ## License
 
